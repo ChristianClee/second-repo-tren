@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import FormItem from "./components/FormItem";
+import FormList from "./components/FormList";
+import "./components/style/Style.css"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [posts, setPosts] = useState(
+        [
+            { id: 0, language: "JuvaScript", description: "this language is most integrated in web development among others" },
+            { id: 1, language: "JuvaScript", description: "this language is most integrated in web development" },
+            { id: 2, language: "JuvaScript", description: "this language is most integrated" },
+        ]
+    )
+    const [posts1, setPosts1] = useState(
+        [
+            { id: 3, language: "python", description: "this language is most simple for understanding its basic concept" },
+            { id: 4, language: "node js", description: "this language is most simple for understanding" },
+            { id: 5, language: "ecma script", description: "this language is most simple" },
+        ]
+    )
+    
+
+    
+    
+
+    return (
+        <div className="wrapper">
+            <div className="container">
+                <FormList data={posts} title={"first language"} />
+                <FormList data={posts1} title={"second language"} />
+            </div>
+        </div>
+    )
 }
 
-export default App;
+export default App
