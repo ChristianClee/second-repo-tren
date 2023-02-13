@@ -1,0 +1,7 @@
+.inp{
+    /* display: block; */
+    width: 100%;
+    border: 2px solid green;
+    padding: 10px 0;
+    margin-top: 10px;
+}

@@ -1,15 +1,15 @@
 import React from "react";
 import FormItem from "./FormItem"
 
-function FormList({ data: posts , title}) {
-    // console.log("posts",posts)
-    console.log("title",title)
+
+function FormList({ posts, title }) {
     return (
-        posts.map(post => {
-            // console.log("post", post)
-            return <FormItem data={{ post: post, title: title }} key={post.id}  />
-            }
-        )
+        <div>
+            <h2 style={{textAlign:"center"}}>{title}</h2>
+            {posts.map((post, index )=> {
+                return <FormItem number={index + 1} post={post} key={post.id} />
+            })}
+        </div>
     )
 }
 

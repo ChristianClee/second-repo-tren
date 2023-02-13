@@ -22,13 +22,13 @@ html,body{
 .container{
     max-width: 900px;
     margin: 0 auto;
-    /* background-color: aqua; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .body{
+    /* background-color: aqua ; */
     display: flex;
     width: 500px;
     justify-content: space-between;
